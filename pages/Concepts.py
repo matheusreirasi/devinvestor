@@ -2,6 +2,11 @@ import streamlit as st
 
 st.title("Conceitos e técnicas")
 
+if not st.session_state['authentication_status']:
+  st.info('Please Login from the Home page and try again.')
+  st.stop()
+    
+
 st.write("Os documentos necessários mais importantes para realizar as análises fundamentalistas são: Balanço patrimonial, demonstrativo de resultado do exercício e DFC.")
 
 st.header("Aprenda o básico!", divider= True)

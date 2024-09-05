@@ -1,6 +1,11 @@
 import streamlit as st
 from helpers.visualization import *
 
+st.title('Análise de ações')
+
+if not st.session_state['authentication_status']:
+  st.info('Please Login from the Home page and try again.')
+  st.stop()
 
 st.title("Ações com requisito mínimo")
 st.write('Liquidez nos últimos 2 meses maior que 1 milhão.')
